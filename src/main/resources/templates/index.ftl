@@ -36,6 +36,12 @@
 
 
 
+<#--  Common-components  -->
+
+    <script src="/app/common-components/common-components.module.js"></script>
+    <script src="/app/common-components/my-navbar/my-navbar.module.js"></script>
+    <script src="/app/common-components/my-navbar/my-navbar.component.js"></script>
+
 <#--  Main-Page  -->
 
     <script src="/app/main-page/main-page.module.js"></script>
