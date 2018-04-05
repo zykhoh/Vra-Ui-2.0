@@ -9,7 +9,11 @@ if(window){
 
 // Define AngularJS application
 var ngModule = angular.module('vraUiApp', [
-    'ngRoute'
+    'ngRoute',
+    'mainPage',
+    'detectionPage',
+    "searchByImagePage",
+    "uploadPage"
 ]);
 
 // Register environment in AngularJS as constant
