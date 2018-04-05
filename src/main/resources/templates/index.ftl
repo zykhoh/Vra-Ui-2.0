@@ -32,9 +32,11 @@
     <script src="/app/app.module.js"></script>
     <script src="/app/app.config.js"></script>
 
-<#-- Core-Data -->
+<#-- dao - data access object -->
 
-
+    <script src="/app/dao/dao.module.js"></script>
+    <script src="/app/dao/video/video.module.js"></script>
+    <script src="/app/dao/video/video.service.js"></script>
 
 <#--  Common-components  -->
 
@@ -57,7 +59,7 @@
 <#--  Upload-Page  -->
 
     <script src="/app/upload-page/upload-page.module.js"></script>
-
+    <script src="/app/upload-page/upload-page.controller.js"></script>
 
 
 </head>
