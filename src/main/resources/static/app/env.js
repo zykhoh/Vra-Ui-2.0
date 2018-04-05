@@ -3,6 +3,8 @@
 
     // API url
     window.__env.apiUrl = 'http://dev.your-api.com';
+    window.__env.coreApiUrl = 'http://localhost:8080';
+    window.__env.videoBase = '/api/videos';
 
     // Base url
     window.__env.baseUrl = '/';

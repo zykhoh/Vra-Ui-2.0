@@ -10,6 +10,7 @@ if(window){
 // Define AngularJS application
 var ngModule = angular.module('vraUiApp', [
     'ngRoute',
+    'dao',
     'commonComponents',
     'mainPage',
     'detectionPage',

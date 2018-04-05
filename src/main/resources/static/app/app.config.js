@@ -16,7 +16,8 @@ config(['$locationProvider' ,'$routeProvider',
                 templateUrl: '/app/search-by-image-page/search-by-image-page.template.ftl'
             })
             .when('/upload', {
-                templateUrl: '/app/upload-page/upload-page.template.ftl'
+                templateUrl: '/app/upload-page/upload-page.template.ftl',
+                controller: 'uploadPageController'
             })
             .otherwise('/');
     }
