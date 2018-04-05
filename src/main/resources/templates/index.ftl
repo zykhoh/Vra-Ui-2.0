@@ -12,9 +12,7 @@
 <#-- Static Required Files -->
 
     <link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/css/stylish-portfolio.css">
     <link rel="stylesheet" href="webjars/font-awesome/5.0.2/web-fonts-with-css/css/fontawesome.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
     <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
     <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 
@@ -38,12 +36,21 @@
 
 
 
-<#--  Home-Page  -->
+<#--  Main-Page  -->
 
+    <script src="/app/main-page/main-page.module.js"></script>
 
+<#--  Detection-Page  -->
 
-<#--  Dashboard-Page  -->
+    <script src="/app/detection-page/detection-page.module.js"></script>
 
+<#--  Search-By-Image-Page  -->
+
+    <script src="/app/search-by-image-page/search-by-image-page.module.js"></script>
+
+<#--  Upload-Page  -->
+
+    <script src="/app/upload-page/upload-page.module.js"></script>
 
 
 
