@@ -5,10 +5,8 @@ module('vraUiApp').
 config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
 
-        $locationProvider.hashPrefix('!');
-
         $routeProvider
-            .when('/main', {
+            .when('/', {
                 templateUrl: '/app/main-page/main-page.template.ftl'
             })
             .when('/detection', {
@@ -20,6 +18,6 @@ config(['$locationProvider' ,'$routeProvider',
             .when('/upload', {
                 templateUrl: '/app/upload-page/upload-page.template.ftl'
             })
-            .otherwise('/main');
+            .otherwise('/');
     }
 ]);
