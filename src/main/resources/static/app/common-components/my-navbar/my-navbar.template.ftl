@@ -9,7 +9,7 @@
             </button>
             <a class="navbar-brand" href="#/!">Video Retrieval And Analytics</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse pull-right">
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#/!">Home</a></li>
                 <li><a href="#!detection">Object Detection</a></li>

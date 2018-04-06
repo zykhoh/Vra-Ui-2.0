@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>VRA</title>
 
@@ -37,6 +37,8 @@
     <script src="/app/dao/dao.module.js"></script>
     <script src="/app/dao/video/video.module.js"></script>
     <script src="/app/dao/video/video.service.js"></script>
+    <script src="/app/dao/image/image.module.js"></script>
+    <script src="/app/dao/image/image.service.js"></script>
 
 <#--  Common-components  -->
 
@@ -51,6 +53,7 @@
 <#--  Detection-Page  -->
 
     <script src="/app/detection-page/detection-page.module.js"></script>
+    <script src="/app/detection-page/detection-page.controller.js"></script>
 
 <#--  Search-By-Image-Page  -->
 
