@@ -4,10 +4,15 @@
     // API url
     window.__env.apiUrl = 'http://dev.your-api.com';
     window.__env.coreApiUrl = 'http://localhost:8080';
-    window.__env.videoBase = '/api/videos';
 
     // Base url
     window.__env.baseUrl = '/';
+    window.__env.videoBase = '/api/videos';
+    window.__env.imageBase = '/api/images';
+
+    // Keyword
+    window.__env.addVideo = '/add';
+    window.__env.detect = '/detect';
 
     // Whether or not to enable debug mode
     // Setting this to false will disable console output

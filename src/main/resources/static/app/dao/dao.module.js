@@ -1,5 +1,6 @@
 'use strict';
 
 angular.module('dao', [
-    'dao.video'
+    'dao.video',
+    'dao.image'
 ]);
