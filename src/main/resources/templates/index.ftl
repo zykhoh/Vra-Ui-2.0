@@ -13,8 +13,10 @@
 
     <link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="webjars/font-awesome/5.0.2/web-fonts-with-css/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="webjars/video-js/5.10.7/video-js.min.css"/>
     <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
     <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <script src="webjars/video-js/5.10.7/video.min.js"></script>
 
     <script src="webjars/angularjs/1.6.6/angular.min.js"></script>
     <script src="webjars/angularjs/1.6.6/angular-route.min.js"></script>
@@ -39,16 +41,21 @@
     <script src="/app/dao/video/video.service.js"></script>
     <script src="/app/dao/image/image.module.js"></script>
     <script src="/app/dao/image/image.service.js"></script>
+    <script src="/app/dao/search/search.module.js"></script>
+    <script src="/app/dao/search/search.service.js"></script>
 
 <#--  Common-components  -->
 
     <script src="/app/common-components/common-components.module.js"></script>
     <script src="/app/common-components/my-navbar/my-navbar.module.js"></script>
     <script src="/app/common-components/my-navbar/my-navbar.component.js"></script>
+    <script src="/app/common-components/my-footer/my-footer.module.js"></script>
+    <script src="/app/common-components/my-footer/my-footer.component.js"></script>
 
 <#--  Main-Page  -->
 
     <script src="/app/main-page/main-page.module.js"></script>
+    <script src="/app/main-page/main-page.controller.js"></script>
 
 <#--  Detection-Page  -->
 

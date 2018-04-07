@@ -98,3 +98,5 @@
         </table>
     </div>
 </div>
+
+<my-footer></my-footer>
