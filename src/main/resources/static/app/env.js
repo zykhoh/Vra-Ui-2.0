@@ -9,10 +9,13 @@
     window.__env.baseUrl = '/';
     window.__env.videoBase = '/api/videos';
     window.__env.imageBase = '/api/images';
+    window.__env.searchBase = '/api/search';
 
     // Keyword
     window.__env.addVideo = '/add';
     window.__env.detect = '/detect';
+    window.__env.searchVideo = '/video';
+    window.__env.searchImage = '/image';
 
     // Whether or not to enable debug mode
     // Setting this to false will disable console output

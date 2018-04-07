@@ -7,7 +7,8 @@ config(['$locationProvider' ,'$routeProvider',
 
         $routeProvider
             .when('/', {
-                templateUrl: '/app/main-page/main-page.template.ftl'
+                templateUrl: '/app/main-page/main-page.template.ftl',
+                controller: 'mainPageController'
             })
             .when('/detection', {
                 templateUrl: '/app/detection-page/detection-page.template.ftl',

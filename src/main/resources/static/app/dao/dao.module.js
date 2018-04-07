@@ -2,5 +2,6 @@
 
 angular.module('dao', [
     'dao.video',
-    'dao.image'
+    'dao.image',
+    'dao.search'
 ]);
