@@ -16,6 +16,8 @@
     window.__env.detect = '/detect';
     window.__env.searchVideo = '/video';
     window.__env.searchImage = '/image';
+    window.__env.getVideoByID = '/:id';
+    window.__env.facetByAnnotation = '/facet/:id';
 
     // Whether or not to enable debug mode
     // Setting this to false will disable console output

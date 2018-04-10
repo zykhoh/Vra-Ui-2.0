@@ -11,7 +11,7 @@ html {
 body {
     min-height: 100%;
     padding-top: 51px;
-    padding-bottom: 51px;
+    padding-bottom: 100px;
 }
 
 .navbar-static-top {
@@ -41,6 +41,19 @@ body {
     background-color: #fff;
 }
 
+.padding-lr-32 {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.padding-bottom-156 {
+    padding-bottom: 156px;
+}
+
+.padding-bottom-32 {
+    padding-bottom: 32px;
+}
+
 .padding-bottom-24 {
     padding-bottom: 24px;
 }
@@ -58,18 +71,19 @@ body {
 }
 
 .badge {
-    margin-right: 3px;
-    margin-left: 3px;
+    margin: 3px 3px;
 }
 
 .tz-gallery {
     padding: 40px;
+    height: 300px;
+    overflow: auto;
 }
 
 .tz-gallery .thumbnail {
     padding: 0;
     margin-bottom: 30px;
-    background-color: #ddd;
+    background-color: #ffffff;
     border-radius: 4px;
     border: none;
     transition: 0.15s ease-in-out;
@@ -102,6 +116,56 @@ body {
 
 .shadow {
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.media-object {
+    height: 160px;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+    font-size: 4em;
+    line-height: 1.5em;
+    height: 1.5em;
+    width: 3em;
+    border: 0.06666em solid #fff;
+    border-radius: 0.3em;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.5em;
+    margin-top: -0.75em;
+}
+
+.video-js .vjs-soft-link {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.5em;
+    margin: 10px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+
+    /*
+      By default, do not show the title bar.
+    */
+}
+
+.video-js.vjs-paused.vjs-has-started .vjs-soft-link,
+.video-js.vjs-user-active.vjs-has-started .vjs-soft-link{
+    display: inline-block;
+}
+
+a.badge:focus, a.badge:hover {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: BLACK;
+}
+
+a.timeFrame:focus, a.timeFrame:hover {
+    cursor: pointer;
+}
+
+div.caption {
+    display: inline-block;
 }
 
 @media screen and (max-width: 360px) {
