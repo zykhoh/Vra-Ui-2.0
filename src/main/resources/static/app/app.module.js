@@ -14,8 +14,9 @@ var ngModule = angular.module('vraUiApp', [
     'commonComponents',
     'mainPage',
     'detectionPage',
-    "searchByImagePage",
-    "uploadPage"
+    'searchByImagePage',
+    'uploadPage',
+    'utils'
 ]);
 
 // Register environment in AngularJS as constant

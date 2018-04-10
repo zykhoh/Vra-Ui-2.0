@@ -44,6 +44,12 @@
     <script src="/app/dao/search/search.module.js"></script>
     <script src="/app/dao/search/search.service.js"></script>
 
+<#--  Utils  -->
+
+    <script src="/app/utils/utils.module.js"></script>
+    <script src="/app/utils/integer-to-date/integer-to-date.module.js"></script>
+    <script src="/app/utils/integer-to-date/integer-to-date.filter.js"></script>
+
 <#--  Common-components  -->
 
     <script src="/app/common-components/common-components.module.js"></script>

@@ -17,6 +17,10 @@ factory('search',
                 url: window.__env.coreApiUrl + window.__env.searchBase + window.__env.searchVideo,
                 transformRequest: angular.identity,
                 headers: {'Content-Type': undefined}
+            },
+            videoByIdAndFacetOnAnnotation : {
+                method: 'GET',
+                url: window.__env.coreApiUrl + window.__env.searchBase + window.__env.facetByAnnotation
             }
         });
 
