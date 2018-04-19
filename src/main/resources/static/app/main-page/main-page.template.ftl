@@ -19,7 +19,7 @@
     </form>
 </div>
 
-<div class="container padding-bottom-156" ng-if="!searched">
+<div class="container" ng-if="!searched">
     <blockquote>
         <p>
             This is a platform for video and image retrieval website. It performs object detection, feature extraction, automated indexing and support retrieval. Try searching with single or multiple words or term.
@@ -32,15 +32,16 @@
 
 <div class="clearfix"></div>
 
-<div class="container" id="#video">
-    <h4>Video Player</h4>
+<div class="container" ng-if="searched">
+    <h4 id="#video">Video Player</h4>
 
     <hr/>
 
     <div ng-class="!searched ? 'col-md-offset-2': ''" class="container col-md-8 padding-top-12">
         <div class="shadow">
             <video id="currentVideo" class="video-js vjs-default-skin" controls preload="none"
-                   data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+                   data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
+                   vjs-video vjs-media="currentVideo">
             </video>
 
             <div class="panel padding-lr-32 padding-bottom-32" ng-if="seeVideo">
@@ -81,6 +82,35 @@
                 </h3>
             </div>
         </div>
+
+        <div class="" ng-if="searched">
+            <h4>Relevant Videos</h4>
+
+            <hr/>
+
+            <div ng-if="gotVideos">
+                <div class="row padding-top-12 padding-bottom-12" ng-repeat="video in videos">
+                    <div class="media">
+                        <div class="media-left">
+                            <a ng-click="toVideo(video.id)">
+                                <img class="media-object" src="{{ video.imageFolder + '/000001.jpg' }}" alt="{{ video.title }}">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h5 class="media-heading">
+                                {{ video.title }}
+                                <span class="pull-right">{{ video.date | date:'dd/MM/yyyy'}}</span>
+                            </h5>
+                            {{ video.description }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-if="!gotVideos">
+                <p>No relevant video is found.</p>
+            </div>
+        </div>
     </div>
 
     <div class="container col-md-4" ng-if="searched">
@@ -106,34 +136,7 @@
         </div>
     </div>
 
-    <div class="container col-md-8" ng-if="searched">
-        <h4>Relevant Videos</h4>
 
-        <hr/>
-
-        <div ng-if="gotVideos">
-            <div class="row padding-top-12 padding-bottom-12" ng-repeat="video in videos">
-                <div class="media">
-                    <div class="media-left">
-                        <a ng-click="toVideo(video.id)">
-                            <img class="media-object" src="{{ video.imageFolder + '/000001.jpg' }}" alt="{{ video.title }}">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h5 class="media-heading">
-                            {{ video.title }}
-                            <span class="pull-right">{{ video.date | date:'dd/MM/yyyy'}}</span>
-                        </h5>
-                        {{ video.description }}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div ng-if="!gotVideos">
-            <p>No relevant video is found.</p>
-        </div>
-    </div>
 </div>
 
 <my-footer></my-footer>

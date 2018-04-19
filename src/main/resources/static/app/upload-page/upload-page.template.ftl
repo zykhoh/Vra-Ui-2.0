@@ -16,24 +16,24 @@
 
         <div class="form-group">
             <div class="input-group col-sm-4">
-                <input type="file" class="form-control" name="videoFile" ng-model="newVideo.videoFile" placeholder="Drop here"/>
+                <input type="file" class="form-control" name="videoFile" ng-model="newVideo.videoFile" placeholder="Drop here" required/>
             </div>
         </div>
 
         <div class="form-group">
             <div class="input-group col-sm-4">
-                <input type="text" class="form-control" name="title" ng-model="newVideo.title" placeholder="Video Title"/>
+                <input type="text" class="form-control" name="title" ng-model="newVideo.title" placeholder="Video Title" required/>
             </div>
         </div>
 
         <div class="form-group">
             <div class="input-group col-sm-4">
-                <input type="date" class="form-control" name="date" ng-model="newVideo.date" placeholder="Video Captured Date"/>
+                <input type="date" class="form-control" name="date" ng-model="newVideo.date" placeholder="Video Captured Date" required/>
             </div>
         </div>
 
         <div class="form-group">
-            <textarea class="form-control" name="description" ng-model="newVideo.description" placeholder="Description"></textarea>
+            <textarea class="form-control" name="description" ng-model="newVideo.description" placeholder="Description" required></textarea>
         </div>
 
         <div class="form-group">

@@ -12,8 +12,9 @@
 <#-- Static Required Files -->
 
     <link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="webjars/font-awesome/5.0.2/web-fonts-with-css/css/fontawesome.min.css"/>
     <link rel="stylesheet" href="webjars/video-js/5.10.7/video-js.min.css"/>
+    <link rel="stylesheet" href="webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min-jsf.css">
     <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
     <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
     <script src="webjars/video-js/5.10.7/video.min.js"></script>
@@ -24,6 +25,7 @@
     <script src="webjars/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.min.js"></script>
     <script src="webjars/angularjs/1.6.6/angular-animate.min.js"></script>
     <script src="webjars/angularjs/1.6.6/angular-touch.min.js"></script>
+    <script src="/js/angular-videojs.js"></script>
 
     <link rel="stylesheet" href="/css/app.css"/>
 

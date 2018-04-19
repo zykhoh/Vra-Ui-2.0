@@ -76,7 +76,6 @@ body {
 
 .tz-gallery {
     padding: 40px;
-    height: 300px;
     overflow: auto;
 }
 
@@ -166,6 +165,21 @@ a.timeFrame:focus, a.timeFrame:hover {
 
 div.caption {
     display: inline-block;
+}
+
+.nav>li>a:hover {
+    text-decoration: none;
+    background-color: white;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav>li>a {
+    position: relative;
+    /* display: block; */
 }
 
 @media screen and (max-width: 360px) {

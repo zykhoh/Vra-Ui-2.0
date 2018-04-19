@@ -11,41 +11,14 @@ angular
             $scope.seeVideo = false;
             $scope.showLinks = false;
 
-            var myButton = videojs.getComponent('Button');
-
-            var SoftLink = videojs.extend(myButton, {
-
-                constructor: function(player, options) {
-
-                    myButton.apply(this, arguments);
-
-                    if (options.text) {
-                        this.updateTextContent(options.text);
+            $scope.currentVideo = {
+                sources: [
+                    {
+                        src: '/Users/zykhoh/Downloads/sample.mp4',
+                        type: 'video/mp4'
                     }
-                },
-
-                // The `createEl` function of a component creates its DOM element.
-                createEl: function() {
-                    return videojs.createEl('button', {
-                        className: 'vjs-soft-link row'
-                    });
-                },
-
-                updateTextContent: function(text) {
-
-                    if (typeof text !== 'string') {
-                        text = 'Unknown';
-                    }
-
-                    videojs.emptyEl(this.el());
-                    videojs.appendContent(this.el(), text);
-                }
-            });
-
-            videojs.registerComponent('SoftLink', SoftLink);
-
-            $scope.videoPlayer = videojs('currentVideo');
-
+                ]
+            };
             $scope.videos = {};
             $scope.images = {};
             $scope.selectedVideo = {};
@@ -102,10 +75,18 @@ angular
                     $scope.selectedVideo.description = res.description;
                     $scope.selectedVideo.date = res.date;
                     $scope.selectedVideo.videoUrl = res.videoUrl;
-                    $scope.videoPlayer.src([
-                        {type: "video/mp4", src: res.videoUrl}
-                    ]);
+
+                    var videoPlayer = {
+                        sources : [
+                            {
+                                src: res.videoUrl,
+                                type: 'video/mp4'
+                            }
+                        ]
+                    };
+                    $scope.currentVideo = videoPlayer;
                     $scope.seeVideo = true;
+                    $scope.showLinks = false;
                 });
 
                 $scope.createSoftLink(videoId);
@@ -118,15 +99,24 @@ angular
                     $scope.selectedVideo.date = res.date;
                     $scope.selectedVideo.videoUrl = res.videoUrl;
                     $scope.seeVideo = true;
+                    $scope.showLinks = false;
                 });
 
                 $scope.createSoftLink(videoId);
 
-                $scope.videoPlayer.src([
-                    {type: "video/mp4", src: videoUrl}
-                ]);
-                $scope.videoPlayer.currentTime(curTime);
-                $scope.videoPlayer.load();
+                var videoPlayer = {
+                    sources : [
+                        {
+                            src: videoUrl,
+                            type: 'video/mp4'
+                        }
+                    ]
+                };
+                $scope.currentVideo = videoPlayer;
+
+
+                // videoPlayer.currentTime(curTime);
+                // videoPlayer.load();
             };
 
             $scope.createSoftLink = function (videoId) {
@@ -154,11 +144,18 @@ angular
             };
 
             $scope.toSpecificTime = function (curTime) {
-                $scope.videoPlayer.src([
-                    {type: "video/mp4", src: $scope.selectedVideo.videoUrl}
-                ]);
-                $scope.videoPlayer.currentTime(curTime);
-                $scope.videoPlayer.load();
+                var videoPlayer = {
+                    sources : [
+                        {
+                            src: $scope.selectedVideo.videoUrl,
+                            type: 'video/mp4'
+                        }
+                    ]
+                };
+                $scope.currentVideo = videoPlayer;
+
+                // videoPlayer.currentTime(curTime);
+                // videoPlayer.load();
             }
 
         }
