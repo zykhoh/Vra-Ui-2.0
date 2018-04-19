@@ -11,14 +11,19 @@ angular
             $scope.seeVideo = false;
             $scope.showLinks = false;
 
-            $scope.currentVideo = {
-                sources: [
-                    {
-                        src: '/Users/zykhoh/Downloads/sample.mp4',
-                        type: 'video/mp4'
-                    }
-                ]
+            // $scope.currentVideo = {
+            //     sources: [
+            //         {
+            //             src: '/Users/zykhoh/Downloads/sample.mp4',
+            //             type: 'video/mp4'
+            //         }
+            //     ]
+            // };
+            var videoPlayer;
+            $scope.init = function () {
+                videoPlayer = videojs('currentVideo');
             };
+
             $scope.videos = {};
             $scope.images = {};
             $scope.selectedVideo = {};
@@ -76,15 +81,20 @@ angular
                     $scope.selectedVideo.date = res.date;
                     $scope.selectedVideo.videoUrl = res.videoUrl;
 
-                    var videoPlayer = {
-                        sources : [
-                            {
-                                src: res.videoUrl,
-                                type: 'video/mp4'
-                            }
-                        ]
-                    };
-                    $scope.currentVideo = videoPlayer;
+                    // var videoPlayer = {
+                    //     sources : [
+                    //         {
+                    //             src: res.videoUrl,
+                    //             type: 'video/mp4'
+                    //         }
+                    //     ]
+                    // };
+                    // $scope.currentVideo = videoPlayer;
+
+                    videoPlayer.src([
+                        {type: "video/mp4", src: res.videoUrl}
+                    ]);
+
                     $scope.seeVideo = true;
                     $scope.showLinks = false;
                 });
@@ -104,19 +114,21 @@ angular
 
                 $scope.createSoftLink(videoId);
 
-                var videoPlayer = {
-                    sources : [
-                        {
-                            src: videoUrl,
-                            type: 'video/mp4'
-                        }
-                    ]
-                };
-                $scope.currentVideo = videoPlayer;
+                // var videoPlayer = {
+                //     sources : [
+                //         {
+                //             src: videoUrl,
+                //             type: 'video/mp4'
+                //         }
+                //     ]
+                // };
+                // $scope.currentVideo = videoPlayer;
 
-
-                // videoPlayer.currentTime(curTime);
-                // videoPlayer.load();
+                videoPlayer.src([
+                    {type: "video/mp4", src: videoUrl}
+                ]);
+                videoPlayer.currentTime(curTime);
+                videoPlayer.load();
             };
 
             $scope.createSoftLink = function (videoId) {
@@ -154,8 +166,11 @@ angular
                 };
                 $scope.currentVideo = videoPlayer;
 
-                // videoPlayer.currentTime(curTime);
-                // videoPlayer.load();
+                videoPlayer.src([
+                    {type: "video/mp4", src: $scope.selectedVideo.videoUrl}
+                ]);
+                videoPlayer.currentTime(curTime);
+                videoPlayer.load();
             }
 
         }

@@ -38,10 +38,9 @@
     <hr/>
 
     <div ng-class="!searched ? 'col-md-offset-2': ''" class="container col-md-8 padding-top-12">
-        <div class="shadow">
+        <div class="shadow" ng-init="init()">
             <video id="currentVideo" class="video-js vjs-default-skin" controls preload="none"
-                   data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
-                   vjs-video vjs-media="currentVideo">
+                   data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
             </video>
 
             <div class="panel padding-lr-32 padding-bottom-32" ng-if="seeVideo">
