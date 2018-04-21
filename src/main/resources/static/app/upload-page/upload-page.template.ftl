@@ -5,7 +5,7 @@
     <div class="row">
         <h2>Upload Video Here</h2>
         <p>
-            The video uploaded will be taken into several processes typically image feature extraction, object detection and indexing. Currently, only mp4 video format is supported. The maximum file size limitation is up to 150MB.
+            The video uploaded will be taken into several processes typically image feature extraction, object detection and indexing. The average speed of full extraction is 10 seconds for a video of 1 second long. Currently, only mp4 video format is supported. The maximum file size limitation is up to 150MB.
         </p>
     </div>
 

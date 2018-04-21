@@ -19,6 +19,7 @@ angular
             //         }
             //     ]
             // };
+
             var videoPlayer;
             $scope.init = function () {
                 videoPlayer = videojs('currentVideo');
@@ -142,29 +143,38 @@ angular
                             $scope.annotationName.push(value);
                         }
                     });
-                    // angular.forEach($scope.annotations, function (key, value) {
-                    //     // $scope.videoPlayer.addChild('SoftLink', {
-                    //     //     text: value
-                    //     // });
-                    // });
                 });
             };
 
             $scope.showLinkList = function (annotationName) {
                 $scope.timeFrames = $scope.annotations[annotationName];
+                if (!$scope.showLinks) {
+                    $scope.showLinks = true;
+                    var btnContainer = document.getElementById("badgeList");
+
+                    var badges = btnContainer.getElementsByClassName("badge");
+
+                    for (var i = 0; i < badges.length; i++) {
+                        badges[i].addEventListener("click", function() {
+                            var current = document.getElementsByClassName("active");
+                            current[0].className = current[0].className.replace("active", "");
+                            this.className += " active";
+                        });
+                    }
+                }
                 $scope.showLinks = true;
             };
 
             $scope.toSpecificTime = function (curTime) {
-                var videoPlayer = {
-                    sources : [
-                        {
-                            src: $scope.selectedVideo.videoUrl,
-                            type: 'video/mp4'
-                        }
-                    ]
-                };
-                $scope.currentVideo = videoPlayer;
+                // var videoPlayer = {
+                //     sources : [
+                //         {
+                //             src: $scope.selectedVideo.videoUrl,
+                //             type: 'video/mp4'
+                //         }
+                //     ]
+                // };
+                // $scope.currentVideo = videoPlayer;
 
                 videoPlayer.src([
                     {type: "video/mp4", src: $scope.selectedVideo.videoUrl}

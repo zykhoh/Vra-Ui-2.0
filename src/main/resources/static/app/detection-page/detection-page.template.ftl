@@ -55,7 +55,7 @@
 
     <div class="row">
         <div class="alert alert-info" role="alert">
-            This program use YOLO (You Only Look Once) object detection algorithm.
+            This program use YOLO (You Only Look Once) object detection algorithm. (<a href="https://github.com/pjreddie/darknet/wiki/YOLO:-Real-Time-Object-Detection#how-it-works" target="_blank">YOLO Theory Explanation</a>)
         </div>
     </div>
     <div class="row">

@@ -1,3 +1,3 @@
 <div class="footer">
-    <p>Footer</p>
+    <p>VRA</p>
 </div>

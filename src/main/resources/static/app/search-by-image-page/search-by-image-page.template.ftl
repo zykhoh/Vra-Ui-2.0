@@ -162,7 +162,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8"><h1>LireSolr Demo</h1></div>
+        <div class="col-md-12">
+            <h1>LireSolr Demo</h1>
+            <p>LireSolr is a library of solr plugin to extract image feature. For more detailed information please visit <a href="https://github.com/dermotte/liresolr" target="_blank">https://github.com/dermotte/liresolr</a></p>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -195,11 +198,9 @@
                                     <label for="searchUrlQueryFeature" class="control-label">Search feature</label>
                                     <select id="searchUrlQueryFeature" class="form-control input-sm">
                                         <option value="ph">PHOG</option>
-                                        <option value="ce">CEDD</option>
-                                        <option value="cl">ColorLayout</option>
-                                        <option value="sc">ScalableColor</option>
+                                        <option value="eh">Edge Histogram</option>
+                                        <option value="cl">Color Layout</option>
                                         <option value="jc">JCD</option>
-                                        <option value="oh">OpponentHistogram</option>
                                         <!--option>Boosted query</option-->
                                     </select>
                                 </div>

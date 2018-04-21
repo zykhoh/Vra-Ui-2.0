@@ -2,12 +2,19 @@
 
 <div class="jumbotron"  ng-if="!searched">
     <div class="container">
-        <h1  class=" text-center">Welcome!</h1>
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img class="pull-right" src="/image/video-icon-black.png" style="max-height: 100px"/>
+            </div>
+            <div class="col-md-7">
+                <h1  class="">Welcome!</h1>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="container">
-    <form class="padding-top-24 padding-bottom-24" name="searchForm" id="searchForm" ng-submit="search()">
+    <form class="padding-bottom-24 padding-top-12" name="searchForm" id="searchForm" ng-submit="search()">
         <div class="row">
             <div ng-class="searched ? 'col-md-6 input-group' : 'col-md-6 col-md-offset-3 input-group'">
                 <input type="text" class="form-control" name="searchTerm" ng-model="searchTerm" placeholder="search HERE"/>
@@ -43,7 +50,7 @@
                    data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
             </video>
 
-            <div class="panel padding-lr-32 padding-bottom-32" ng-if="seeVideo">
+            <div class="panel padding-lr-32 padding-bottom-32" id="badgeList" ng-if="seeVideo">
                 <div class="row padding-top-12">
                     <div class="caption" ng-repeat="annotation in annotationName track by $index">
                         <a class="badge" ng-click="showLinkList(annotation)">

@@ -15,7 +15,7 @@ angular
 
                 video.add(formData, function(res) {
                     $scope.gotMessage = true;
-                    $scope.message.msg = 'Video uploaded and successfully added';
+                    $scope.message.msg = 'Video uploaded successfully. However, the video is not ready for retrieval yet. The system will take time to perform image feature extraction, object detection and indexing for full retrieval.';
                     $scope.message.type = 'success';
                     document.getElementById("addVideoForm").reset();
                 }, function(error) {

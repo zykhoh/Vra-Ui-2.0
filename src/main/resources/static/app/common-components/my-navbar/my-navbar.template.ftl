@@ -7,7 +7,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Video Retrieval And Analytics</a>
+            <div class="navbar-left">
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-brand mybrand" href="/"><img src="/image/video-icon-white.png" style="max-height: 30px"/></a></li>
+                    <li class="navbar-brand">Video Retrieval and Analytics Engine</li>
+                </ul>
+            </div>
+
         </div>
         <div id="navbar" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
