@@ -29,10 +29,10 @@
 <div class="container" ng-if="!searched">
     <blockquote>
         <p>
-            This is a platform for video and image retrieval website. It performs object detection, feature extraction, automated indexing and support retrieval. Try searching with single or multiple words or term.
+            This is a platform for video and image retrieval. 10 surveillance videos are obtained from YouTube. The sample datasets are extracted and indexed. Hence, it is available for retrieval.
         </p>
         <footer>
-            E.g. person or yyyy/dd/MM
+            E.g. Try search "Street Fight", "person" or "01/04/2016"
         </footer>
     </blockquote>
 </div>
